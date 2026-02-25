@@ -2,6 +2,8 @@ backend:
   name: github
   repo: gcarbajalz/articles_selling # IMPORTANTE: Cambia esto por tu usuario y repo "usuario/repo"
   branch: main # O la rama principal de tu repositorio ("master")
+  base_url: https://floral-credit-eb71.giorgiocarbajal.workers.dev/
+  auth_endpoint: auth
 
 media_folder: "img"
 public_folder: "img"
