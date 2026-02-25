@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: TU_USUARIO/TU_REPOSITORIO # IMPORTANTE: Cambia esto por tu usuario y repo "usuario/repo"
+  repo: gcarbajalz/articles_selling # IMPORTANTE: Cambia esto por tu usuario y repo "usuario/repo"
   branch: main # O la rama principal de tu repositorio ("master")
 
 media_folder: "img"
