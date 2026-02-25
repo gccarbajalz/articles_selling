@@ -1,0 +1,9 @@
+{
+    "id": "item-1",
+    "titulo": "Silla de Escritorio Ergonómica",
+    "categoria": "Muebles",
+    "codigoImagen": "0001",
+    "precio": 45000,
+    "estado": "Por vender",
+    "descripcion": "Silla negra ajustable en altura con soporte lumbar. Menos de 1 año de uso."
+}

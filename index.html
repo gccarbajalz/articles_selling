@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Artículos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Meta etiquetas para SEO -->
+    <meta name="description" content="Catálogo público de artículos en venta. Filtra por categoría y estado.">
+</head>
+<body>
+    <header>
+        <h1>Catálogo de Artículos</h1>
+        <p>Encuentra nuestros productos al mejor precio</p>
+    </header>
+
+    <div class="controls-container">
+        <div class="filters">
+            <div class="search-wrapper">
+                <input type="text" id="search-input" placeholder="Buscar por título..." autocomplete="off">
+            </div>
+            <select id="category-select" aria-label="Filtrar por categoría">
+                <option value="">Todas las categorías</option>
+            </select>
+            <select id="status-select" aria-label="Filtrar por estado">
+                <option value="">Todos los estados</option>
+                <option value="Por vender">Por vender</option>
+                <option value="Separado">Separado</option>
+                <option value="Vendido">Vendido</option>
+                <option value="Ya no se vende">Ya no se vende</option>
+            </select>
+            <select id="sort-select" aria-label="Ordenar resultados">
+                <option value="default">Orden por defecto</option>
+                <option value="price-asc">Precio: Menor a Mayor</option>
+                <option value="price-desc">Precio: Mayor a Menor</option>
+            </select>
+        </div>
+        <div class="results-meta">
+            <span id="results-count">Cargando...</span>
+        </div>
+    </div>
+
+    <main>
+        <div id="products-container" class="grid">
+            <!-- Los artículos se cargarán aquí dinámicamente -->
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

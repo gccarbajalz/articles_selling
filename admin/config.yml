@@ -1,0 +1,31 @@
+backend:
+  name: github
+  repo: TU_USUARIO/TU_REPOSITORIO # IMPORTANTE: Cambia esto por tu usuario y repo "usuario/repo"
+  branch: main # O la rama principal de tu repositorio ("master")
+
+media_folder: "img"
+public_folder: "img"
+
+collections:
+  - name: "articulos"
+    label: "Artículos"
+    folder: "content/products"
+    create: true
+    format: "json"
+    identifier_field: "id"
+    # Extensión del archivo
+    extension: "json"
+    fields:
+      - {label: "ID Único", name: "id", widget: "string", required: true}
+      - {label: "Título", name: "titulo", widget: "string", required: true}
+      - {label: "Categoría", name: "categoria", widget: "string", required: true}
+      - {label: "Código de Imagen", name: "codigoImagen", widget: "string", hint: "Nombre del archivo de imagen sin extensión ej: 0001", required: true}
+      - {label: "Precio", name: "precio", widget: "number", value_type: "float", required: true}
+      - label: "Estado"
+        name: "estado"
+        widget: "select"
+        options: ["Por vender", "Vendido", "Separado", "Ya no se vende"]
+        required: true
+      - {label: "Descripción", name: "descripcion", widget: "text", required: false}
+      - {label: "Descripción HTML (Opcional)", name: "descripcionHtml", widget: "markdown", required: false, hint: "Aparecerá en el detalle del producto si está presente."}
+      - {label: "Descripción para Marketplace (Opcional)", name: "descripcionMarketplace", widget: "text", required: false, hint: "Texto plano optimizado para copiar a Facebook."}
