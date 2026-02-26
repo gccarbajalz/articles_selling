@@ -10,6 +10,50 @@
 
 <body>
     <script src="https://unpkg.com/decap-cms@^3/dist/decap-cms.js"></script>
+
+    <script>
+        // Fuerza config inline (evita problemas de ruta/cache de config.yml)
+        window.CMS.init({
+            config: {
+                backend: {
+                    name: "github",
+                    repo: "TUUSUARIO/TUREPO", // <-- CAMBIA ESTO
+                    branch: "main",
+                    base_url: "https://articles-wrangler.gmyccloudzflare.workers.dev",
+                    auth_endpoint: "/auth"
+                },
+
+                // Para imágenes si las manejas desde el repo
+                media_folder: "img",
+                public_folder: "/img",
+
+                // Colección mínima (puedes ajustar luego)
+                collections: [
+                    {
+                        name: "products",
+                        label: "Productos",
+                        folder: "content/products",
+                        create: true,
+                        format: "json",
+                        fields: [
+                            { label: "ID", name: "id", widget: "string" },
+                            { label: "Título", name: "titulo", widget: "string" },
+                            { label: "Categoría", name: "categoria", widget: "string" },
+                            { label: "Código Imagen", name: "codigoImagen", widget: "string" },
+                            { label: "Precio", name: "precio", widget: "number" },
+                            {
+                                label: "Estado",
+                                name: "estado",
+                                widget: "select",
+                                options: ["Por vender", "Vendido", "Separado", "Ya no se vende"]
+                            },
+                            { label: "Descripción", name: "descripcion", widget: "text" }
+                        ]
+                    }
+                ]
+            }
+        });
+    </script>
 </body>
 
 </html>
