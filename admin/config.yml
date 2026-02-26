@@ -3,7 +3,7 @@ backend:
   repo: gcarbajalz/articles_selling
   branch: main
   base_url: https://articles-wrangler.gmyccloudzflare.workers.dev
-  auth_endpoint: auth
+  auth_endpoint: /auth
 
 media_folder: "img"
 public_folder: "img"
